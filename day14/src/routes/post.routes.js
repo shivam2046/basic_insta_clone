@@ -12,7 +12,7 @@ const upload = multer({
 postRouter.post(
     "/",
     upload.single("image"),
-    postController.createpost
+    postController.createpostController
 );
 
 module.exports = postRouter;
