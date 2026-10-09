@@ -2,7 +2,7 @@ const express= require("express")
 const cookieParser = require('cookie-parser')
 const authRouter= require('./routes/auth.routes')
 const postRouter= require("./routes/post.routes")
-const followRouter= require('./routes/follow.routes')
+const followRouter= require('./routes/user.routes')
 
 const cors= require('cors')
 
@@ -16,7 +16,7 @@ app.use(cors({
 }))
   
 app.use('/api/auth',authRouter)  
-app.use('/api/post',postRouter)
+app.use('/api/posts',postRouter)
 app.use('/api/user',followRouter)
 
 module.exports= app
