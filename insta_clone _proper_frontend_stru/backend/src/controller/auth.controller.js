@@ -55,7 +55,7 @@ async function login(req, res) {
             { username },
             { email }
         ]
-    });
+    }).select("+password")
 
 
     if (!user) {

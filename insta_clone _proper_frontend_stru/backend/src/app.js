@@ -1,5 +1,6 @@
 const express= require("express")
 const authrouter= require("./routes/authrouter")
+const postrouter= require('./routes/postrouter')
 const cors=require('cors')
 const cookieParser = require('cookie-parser')
 
@@ -17,5 +18,6 @@ app.use(cors({
 }))
 
 app.use("/api/auth",authrouter)
+app.use('/api/post',postrouter)
 
 module.exports=app
